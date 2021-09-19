@@ -3,6 +3,11 @@
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
+  @include phone-screen {
+    min-height: 400px;
+    position: relative;
+    top: 0;
+  }
 }
 
 .banner__block {
@@ -10,6 +15,14 @@
   flex-direction: column;
   align-items: center;
   padding-top: 200px;
+  @include phone-screen {
+    padding-top: 100px;
+    margin-bottom: 250px;
+    transform: translateY(50%);
+  }
+  @include semi-small-phone-screen {
+    transform: translateY(40%);
+  }
 }
 
 .banner__img {
@@ -19,15 +32,28 @@
   border: 3px solid $white;
   border-radius: 50%;
   margin-bottom: 30px;
+  @include phone-screen {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 .banner__title {
   color: $white;
   font-size: 36px;
   margin-bottom: 20px;
+  @include phone-screen {
+    color: $gray;
+    text-align: center;
+    max-width: 300px;
+  }
 }
 
 .banner__text {
   color: $white;
   font-size: 18px;
+  @include phone-screen {
+    color: $gray;
+    text-align: center;
+  }
 }

@@ -4,6 +4,12 @@
   }
 }
 
+@mixin semi-small-phone-screen {
+  @media (max-width: 430px) {
+    @content;
+  }
+}
+
 @mixin phone-screen {
   @media (max-width: 600px) {
     @content;

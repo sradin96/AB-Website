@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -33,7 +37,7 @@ li {
 }
 @media (max-width: 600px) {
   .page-banner {
-    min-height: 300px;
+    min-height: 250px;
   }
 }
 
@@ -346,12 +350,31 @@ li {
   background-size: 100%;
   background-position: center;
 }
+@media (max-width: 600px) {
+  .banner {
+    min-height: 400px;
+    position: relative;
+    top: 0;
+  }
+}
 
 .banner__block {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 200px;
+}
+@media (max-width: 600px) {
+  .banner__block {
+    padding-top: 100px;
+    margin-bottom: 250px;
+    transform: translateY(50%);
+  }
+}
+@media (max-width: 430px) {
+  .banner__block {
+    transform: translateY(40%);
+  }
 }
 
 .banner__img {
@@ -362,16 +385,35 @@ li {
   border-radius: 50%;
   margin-bottom: 30px;
 }
+@media (max-width: 600px) {
+  .banner__img {
+    width: 150px;
+    height: 150px;
+  }
+}
 
 .banner__title {
   color: #fff;
   font-size: 36px;
   margin-bottom: 20px;
 }
+@media (max-width: 600px) {
+  .banner__title {
+    color: #464642;
+    text-align: center;
+    max-width: 300px;
+  }
+}
 
 .banner__text {
   color: #fff;
   font-size: 18px;
+}
+@media (max-width: 600px) {
+  .banner__text {
+    color: #464642;
+    text-align: center;
+  }
 }
 
 .about-me {
@@ -460,12 +502,17 @@ li {
   align-items: center;
   justify-content: space-around;
 }
+@media (max-width: 600px) {
+  .education__block {
+    flex-direction: column;
+  }
+}
 
 .education__box {
   box-shadow: 0 1px 5px -2px rgba(32, 32, 32, 0.8);
   padding: 30px 40px;
   min-height: 200px;
-  width: 400px;
+  max-width: 400px;
   border-radius: 11px;
   position: relative;
   opacity: 0;
@@ -474,6 +521,18 @@ li {
 @media (max-width: 1074px) {
   .education__box {
     margin: 0 10px;
+  }
+}
+@media (max-width: 780px) {
+  .education__box {
+    padding: 20px 30px;
+  }
+}
+@media (max-width: 600px) {
+  .education__box {
+    margin: 20px 0;
+    min-height: 180px;
+    width: 100%;
   }
 }
 
@@ -485,6 +544,11 @@ li {
   height: 80px;
   font-size: 22px;
   color: #335384;
+}
+@media (max-width: 780px) {
+  .education__box-title {
+    font-size: 20px;
+  }
 }
 
 .education__box-text {
@@ -520,6 +584,11 @@ li {
   left: -10%;
   opacity: 0;
   transition: all 0.2s ease-in;
+}
+@media (max-width: 780px) {
+  .work__box {
+    padding-right: 10px;
+  }
 }
 
 .work__box.active-box {
@@ -618,6 +687,16 @@ li {
 
 form {
   padding: 0 12px;
+}
+@media (max-width: 600px) {
+  form {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 350px) {
+  form {
+    margin-top: 0;
+  }
 }
 
 .footer {

@@ -77,19 +77,30 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  @include phone-screen {
+    flex-direction: column;
+  }
 }
 
 .education__box {
   box-shadow: 0 1px 5px -2px rgba(32, 32, 32, 0.8);
   padding: 30px 40px;
   min-height: 200px;
-  width: 400px;
+  max-width: 400px;
   border-radius: 11px;
   position: relative;
   opacity: 0;
   transition: $transition;
   @include tablet-screen {
     margin: 0 10px;
+  }
+  @include small-tablet-screen {
+    padding: 20px 30px;
+  }
+  @include phone-screen {
+    margin: 20px 0;
+    min-height: 180px;
+    width: 100%;
   }
 }
 
@@ -101,6 +112,9 @@
   height: 80px;
   font-size: 22px;
   color: $blue;
+  @include small-tablet-screen {
+    font-size: 20px;
+  }
 }
 
 .education__box-text {
@@ -136,6 +150,9 @@
   left: -10%;
   opacity: 0;
   transition: $transition;
+  @include small-tablet-screen {
+    padding-right: 10px;
+  }
 }
 
 .work__box.active-box {
