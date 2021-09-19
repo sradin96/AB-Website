@@ -36,6 +36,16 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  opacity: 0;
+  top: -50%;
+  pointer-events: none;
+  transition: $transition;
+}
+
+.skills__box.active-box {
+  opacity: 1;
+  top: 0;
+  pointer-events: all;
 }
 
 .skills__img {

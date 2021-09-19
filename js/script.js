@@ -1,7 +1,5 @@
 $('.header__menu-link').on('click', function(){
 	$('.header__navigation').toggleClass('active-menu');
-	$('.header__cta-block').toggleClass('active-menu');
-	$('.header__account').toggleClass('active-menu');
 	$('.header__menu-link').toggleClass('toggle-menu');
 	if($(".header__navigation").hasClass("active-menu")) {
 		$('body').addClass('fixed-position');
@@ -67,6 +65,13 @@ $(document).ready(function(){
             $('.box--6').addClass("active-box");          
         } else {
             $('.box--6').removeClass("active-box");  
+        }
+
+        if(scroll <= height - 550 && $(window).width() > 1024) {
+            $('.skills__box').removeClass("active-box");
+        }
+         else {
+            $('.skills__box').addClass("active-box");
         }
     })	
 })
