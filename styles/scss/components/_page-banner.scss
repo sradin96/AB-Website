@@ -1,0 +1,48 @@
+.page-banner {
+  min-height: 500px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  @include phone-screen {
+    min-height: 300px;
+  }
+}
+
+.page-banner__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 200px;
+  @include phone-screen {
+    padding-top: 120px;
+  }
+}
+
+.page-banner__title {
+  font-size: 42px;
+  margin-bottom: 30px;
+  color: $white;
+  @include tablet-screen {
+    font-size: 36px;
+  }
+  @include small-tablet-screen {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  @include phone-screen {
+    font-size: 26px;
+  }
+}
+
+.page-banner__text {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: $white;
+  @include small-tablet-screen {
+    font-size: 16;
+  }
+  @include phone-screen {
+    font-size: 14px;
+  }
+}

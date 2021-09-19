@@ -1,0 +1,33 @@
+.banner {
+  min-height: 800px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.banner__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px;
+}
+
+.banner__img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border: 3px solid $white;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.banner__title {
+  color: $white;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.banner__text {
+  color: $white;
+  font-size: 18px;
+}
